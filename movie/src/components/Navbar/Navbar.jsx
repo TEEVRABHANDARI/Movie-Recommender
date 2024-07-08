@@ -1,8 +1,9 @@
 import React from 'react'
+import '../Navbar/Navbar.css'
 
-export default function Navbar() {
+const Navbar = () => {
   return (
-            <div className='container'>
+    <div className='container'>
             <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
             <a className="navbar-brand" href="#">RateMy Show</a>
@@ -45,3 +46,5 @@ export default function Navbar() {
             </div>
   )
 }
+
+export default Navbar
