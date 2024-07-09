@@ -18,11 +18,11 @@ const Navbar = () => {
                 
             {/* Login Page */}
                 <li className="nav-item">
-                <a className="nav-link"><Link to="/Login" style={{textDecoration:"none"}}>Login</Link></a>
+                <a className="nav-link"><Link to="/login" style={{textDecoration:"none"}}>Login</Link></a>
                 </li>
             {/* My profile add a logo */}
                 <li className="nav-item">
-                <a className="nav-link" href='#'>My Profile</a>
+                <a className="nav-link" href='/profile'>Profile</a>
                 </li>
             </ul>
             <form className="d-flex" role="search">
@@ -32,7 +32,7 @@ const Navbar = () => {
             </div>
         </div>
         </nav>
-            </div>
+    </div>
   )
 }
 
