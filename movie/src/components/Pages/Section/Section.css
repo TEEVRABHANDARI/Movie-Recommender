@@ -1,0 +1,44 @@
+.Section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+.text-section {
+    margin-right: 20px;
+  }
+  
+.text-section p {
+    color: black; /* Adjust the color to match the image */
+    margin: 5px 0;
+  }
+  
+.image-section {
+    background-color: #e0e0e0;
+    padding: 20px;
+    display: flex;
+  }
+  
+/* .image-placeholder {
+    width: 20em;
+    height: 20em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+  }
+   */
+/* .image-placeholder img {
+    max-width: 100%;
+    max-height: 100%;
+  } */
+
+.image-section img{
+    width: 500px;
+    height: 500px;
+}
+.SectionHeading{
+    font-size:60px;
+    font-weight: 700;
+}
