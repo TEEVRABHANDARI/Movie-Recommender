@@ -8,7 +8,7 @@ const FindSeriesSection = () => {
       <h1 className="Findheading">Find your next best series</h1>
       <div className="FindsearchBox">
         <input type="text" placeholder="Search" className="Findinput" />
-        <button className="FindsearchButton"><Link to={"/login"} style={{textDecoration:"none", color:"white"}}>Search</Link></button>
+        <button className="FindsearchButton"><Link to={"/"} style={{textDecoration:"none", color:"white"}}>Search</Link></button>
       </div>
     </div>
   );

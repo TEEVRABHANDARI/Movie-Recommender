@@ -1,0 +1,116 @@
+.Cardscontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .divs {
+    width: 100px;
+    height: 100px;
+    transition: all 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+  }
+  
+  .center {
+    width: 500px;
+    height: 500px;
+    background-color: lightgreen;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+  
+  .left-1, .right-1 {
+    z-index: 2;
+  }
+  
+  .left-2, .right-2 {
+    z-index: 1;
+  }
+  
+  .left-3, .right-3 {
+    z-index: 0;
+  }
+  
+  .left-1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    left: 50%;
+    transform: translateX(-250%);
+  }
+  
+  .left-2 {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    left: 50%;
+    transform: translateX(-350%);
+  }
+  
+  .left-3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    left: 50%;
+    transform: translateX(-450%);
+  }
+  
+  .right-1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    left: 50%;
+    transform: translateX(150%);
+  }
+  
+  .right-2 {
+    width: 100px;
+    height: 100px;
+    background-color: teal;
+    left: 50%;
+    transform: translateX(250%);
+  }
+  
+  /* .right-3 {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    left: 50%;
+    transform: translateX(350%);
+  }
+   */
+  .hidden-left {
+    left: -10%;
+    visibility: hidden;
+  }
+  
+  .hidden-right {
+    left: 110%;
+    visibility: hidden;
+  }
+  
+  .buttons {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    cursor: pointer;
+  }
+  
+  .button-left {
+    left: 5%;
+  }
+  
+  .button-right {
+    right: 5%;
+  }
+  

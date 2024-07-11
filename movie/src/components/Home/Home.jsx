@@ -1,9 +1,13 @@
 import React from 'react'
+import Cards from '../Cards/Cards'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    // <div><Cards /></div>
+    <div>
+      <Cards />
+    </div>
   )
 }
 
-export default Home
+export default Home;

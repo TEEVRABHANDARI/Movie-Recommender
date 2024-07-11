@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Div Alignment</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100%;
+      position: relative;
+    }
+
+    .div {
+      width: 100px;
+      height: 100px;
+      transition: all 0.5s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+    }
+
+    .center {
+      width: 500px; 
+      height: 500px;
+      background-color: lightgreen;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+    }
+
+    .left-1, .right-1 {
+      z-index: 2;
+    }
+
+    .left-2, .right-2 {
+      z-index: 1;
+    }
+
+    .left-3, .right-3 {
+      z-index: 0;
+    }
+
+    .left-1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      left: 50%;
+      transform: translateX(-250%);
+    }
+
+    .left-2 {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      left: 50%;
+      transform: translateX(-350%);
+    }
+
+    .left-3 {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      left: 50%;
+      transform: translateX(-450%);
+    }
+
+    .right-1 {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      left: 50%;
+      transform: translateX(150%);
+    }
+
+    .right-2 {
+      width: 100px;
+      height: 100px;
+      background-color: teal;
+      left: 50%;
+      transform: translateX(250%);
+    }
+
+    .right-3 {
+      width: 100px;
+      height: 100px;
+      background-color: yellow;
+      left: 50%;
+      transform: translateX(350%);
+    }
+
+    .hidden-left {
+      left: -10%;
+      visibility: hidden;
+    }
+
+    .hidden-right {
+      left: 110%;
+      visibility: hidden;
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 4;
+      cursor: pointer;
+    }
+
+    .button-left {
+      left: 5%;
+    }
+
+    .button-right {
+      right: 5%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <button class="button-left">Left</button>
+    <div class="div center">Div 1</div>
+    <div class="div left-1">Div 7</div>
+    <div class="div left-2">Div 6</div>
+    <div class="div hidden-left"></div>
+    <div class="div hidden-right"></div>
+    <div class="div right-1">Div 2</div>
+    <div class="div right-2">Div 3</div>
+    <div class="div right-3">Div 4</div>
+    <button class="button-right">Right</button>
+  </div>
+  <script>
+    const container = document.querySelector('.container');
+    const divs = document.querySelectorAll('.div');
+    const leftButton = document.querySelector('.button-left');
+    const rightButton = document.querySelector('.button-right');
+
+    const initialPositions = ['center', 'left-1', 'left-2', 'hidden-left', 'hidden-right', 'right-1', 'right-2', 'right-3'];
+    let currentPositions = initialPositions;
+
+    function rotatePositionsLeft() {
+      currentPositions.push(currentPositions.shift());
+      updateDivPositions();
+    }
+
+    function rotatePositionsRight() {
+      currentPositions.unshift(currentPositions.pop());
+      updateDivPositions();
+    }
+
+    function updateDivPositions() {
+      divs.forEach((div, index) => {
+        div.className = `div ${currentPositions[index]}`;
+        div.textContent = `Div ${index + 1}`;
+      });
+    }
+
+    leftButton.addEventListener('click', rotatePositionsLeft);
+    rightButton.addEventListener('click', rotatePositionsRight);
+  </script>
+</body>
+</html>
