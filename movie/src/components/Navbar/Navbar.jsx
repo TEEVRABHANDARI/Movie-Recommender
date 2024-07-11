@@ -1,8 +1,6 @@
 import React ,{useState}from 'react'
 import '../Navbar/Navbar.css'
 import { Link } from 'react-router-dom'
-
-
 const Navbar = () => {
 
     const [menu,setMenu] = useState("home")
